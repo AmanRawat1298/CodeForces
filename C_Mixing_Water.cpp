@@ -17,7 +17,7 @@ int main()
         }
         else
         {
-            cout<< (h-c)/(h -t)<<endl; 
+            cout<< (h-c)/(h-t)<<endl; 
         }
 
 	}
