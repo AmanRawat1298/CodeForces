@@ -6,66 +6,61 @@ int main()
 {   
     int t;
     cin>>t;
-    int n;
-    int k;
     while(t--)
 	{
-        
-        
+        int n,k;
         cin>>n>>k;
-        string a;
-        cin>>a;
+        string s;
+        cin>>s;
+
+        int total = 0;
+        int seg = 2*k+1;
+        int val = 0;
         
-        int count = 0;
-        int adds = 0;
-        // cout<<"\nstring ;"<<a<<endl;
-        queue <char> q;
-        for( int i=0; i<a.size(); i++)
-        {   
-            if(a[i] == '1')
+        //Having starting 0 and k spaces empty ahead
+        if(s[0] == '0')
+        {
+            for(int i=0; i<=min(n-1, k); i++)
+                total += (s[i] - '0');
+            if(total == 0)
             {
-                // cout<<"\nwhen a[i] == 1 "<<a[i]<<"-";
-                count++;
-            }
-            q.push(a[i]);
-            // cout<<q.size();
-            cout<<endl<<q.size()<<" c "<<count<<endl;
-            if(q.size() >= 2*k+1)
-            {   
-                
-                if(count == 0)
-                {
-                    adds++; 
-                    int z = 2*k+1;
-                    while(z--)
-                        q.pop();
-                    // q.push(0);
-                    z=k;
-                    while(z>0)
-                    {
-                        q.push('0'); 
-                        z--;
-                    }
-                    z=k; 
-                    q.push('1');
-                    while(z>0)
-                    {
-                        q.push('0'); 
-                        z--;
-                    }
-                    count++;
-                    cout<<"\nadded "<<adds<<" qsize() = "<<q.size()<<endl;
-                }
-
-
-                if(q.front() == '1')
-                {
-                        count--;
-                }
-                q.pop();
+                val++;
+                s[0] = '1';
             }
         }
-        cout<<"\nANS "<<adds<<endl;
-	}
+
+        //Having ending 0 and k spaces behind empty
+        total = 0;
+        if(s[n-1] == '0')
+        {
+            for( int i=n-1; i>=max(n-1-k, 0); i--)
+                total += s[i] - '0';
+            if(total == 0)
+            {
+                val++;
+                s[n-1] = '1';
+
+            }
+        }
+        total = 0;
+        //Checking is first and last index have 1 ;
+        for( int i=0; i<n; i++)
+        {
+            total += s[i]-'0';
+            if(i >= seg-1)
+            {
+               if(total == 0)
+               {
+                   val++;
+                   s[i-k] = '1';
+                   total++;
+               } 
+               if(s[i-seg+1] == '1')
+                    total--;
+            }
+        }
+
+        cout<<val<<endl;
+    }
     return 0;
 }
