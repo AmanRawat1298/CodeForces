@@ -43,7 +43,7 @@ int main()
             }
         }
         total = 0;
-        //Checking is first and last index have 1 ;
+        //Checking when first and last index have 1 ;
         for( int i=0; i<n; i++)
         {
             total += s[i]-'0';
