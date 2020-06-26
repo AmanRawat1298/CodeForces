@@ -13,30 +13,38 @@ int main()
 	{
         string s;
         cin>>s;
-        ll res = 0;
-        for(ll i = 0 ; i<s.length()+2; ++i)
-        {
-            ll cur = i;
-            bool  ok = true;
-            for(ll j = 0 ; j<s.length(); ++j)
-            {
-                
-                res = res + 1;
-                if (s[i] == '+')
-                    cur = cur + 1;
-                else
-                    cur = cur - 1;
-                if (cur < 0)
-                {    ok = false;
-                    break;
-                }
-                if(ok==true)
-                    break;
-
+ 
+        ll n = s.length();
+ 
+        ll pref[n+1];
+        if(s[0]=='+')
+            pref[0]=1;
+        else{
+            pref[0] =-1;
+        }
+ 
+        for(ll i=1;i<n;i++){
+            if(s[i]=='+'){
+                pref[i] = pref[i-1] +1;
+            }else{
+                pref[i] = pref[i-1]-1;
             }
         }
-        cout<<res<<endl;
-            
+        //pref[n] = -1*abs(pref[n-1])-1 ;
+ 
+        ll res=1;
+        ll ans=0;
+ 
+        for(ll i=0;i<=n;i++){
+            if(pref[i]==(-1*res) && i!=n){
+                ans = ans + i + 1;
+                res++;
+            }else if(i==n){
+                ans = ans + n;
+            }
+        }
+ 
+        cout<<ans<<"\n";
 
 	}
     return 0;

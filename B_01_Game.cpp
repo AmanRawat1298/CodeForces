@@ -22,9 +22,7 @@ int main()
             
         }  
         int x = min(zero,ones); 
-        if(x==1)
-            cout<<"DA\n";
-        else if(x%2 == 0)
+        if(x%2 == 0)
         {
             cout<<"NET\n";
         }
