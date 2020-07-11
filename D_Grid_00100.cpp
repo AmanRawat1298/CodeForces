@@ -23,14 +23,11 @@ int main()
         {
             /* code */
             cout<<"0\n";
-
         } 
         else
         {
             cout<<"2"<<endl; 
         }
-           
-
 
         for(int i=0; i<n && k; i++)
         {
@@ -44,8 +41,7 @@ int main()
         }
 
         for(int i=0; i<n ; i++)
-        {
-            
+        {            
             for(int j=0;j<n; j++)
             {
                 cout<<m[i][j];
