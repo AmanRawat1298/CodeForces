@@ -1,0 +1,1 @@
+{"group":"local","interactive":false,"local":true,"memoryLimit":1024,"name":"Local: cmp","srcPath":"/home/aman/Desktop/codeforces/cmp.cpp","tests":[{"id":1597604668415,"input":"aman 200\nkaran 100","output":""},{"id":1597604914625,"input":"aman 100\naman 20\naman 30\nkaran 1\nkaran 99\nkaran 2","output":""}],"timeLimit":3000,"url":"/home/aman/Desktop/codeforces/cmp.cpp"}

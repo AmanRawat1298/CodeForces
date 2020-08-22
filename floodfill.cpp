@@ -1,6 +1,5 @@
 #include <iostream>
 #include <bits/stdc++.h>
-#include <vector>
 using namespace std;
 
 void floodfillUtil(vector <vector<int>> &a, int x, int y, int prevC, int newC)

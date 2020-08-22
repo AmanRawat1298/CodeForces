@@ -6,26 +6,31 @@ int main()
     cin>>t;
     while(t--)
     {
-        long long n,b,m;
-        cin>>n>>b>>m;
-        vector <long long> a(m,0);
-        for(int i=0; i<m; i++)
-            cin>>a[i];
-        // long long blocks = n/b;
-        long long prev = -1;
-        long long curr;
-        long long count = 0;
-        for(int i=0; i<m; i++)
+        int n, k;
+        cin>>n>>k;
+
+        int d[n];
+
+        for(int i=0; i<n; i++)
+            cin>>d[i];
+
+
+        for(int i=0; i<n; i++)
         {
-            curr = a[i]/b;
-            if(curr!=prev)
+            if(k > d[i])
+                cout<<"0";
+            else if(d[i]%k==0)
             {
-                // cout<<"curr"<<curr<<"prev"<<prev<<"count"<<count<<endl;
-                count++;
+                cout<<"1";
             }
-            prev = curr;
+            else
+            {
+                cout<<"0";
+            }
+            
+            
         }
-        cout<<count<<endl;
+        cout<<endl;
     }
 
 

@@ -68,9 +68,10 @@ void MinHeap::insertKey(int k)
 	// Fix the min heap property if it is violated 
 	while (i != 0 && harr[parent(i)] > harr[i]) 
 	{ 
-	swap(harr[i], harr[parent(i)]); 
-	i = parent(i); 
+        swap(harr[i], harr[parent(i)]); 
+        i = parent(i); 
 	} 
+
 } 
 
 void MinHeap::MinHeapify(int i) 

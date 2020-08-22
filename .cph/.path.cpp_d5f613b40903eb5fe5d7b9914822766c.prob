@@ -1,0 +1,1 @@
+{"group":"local","interactive":false,"local":true,"memoryLimit":1024,"name":"Local: path","srcPath":"/home/aman/Desktop/codeforces/path.cpp","tests":[{"id":1597507265177,"input":"15689 28","output":"5"},{"id":1597507343238,"input":"16 4","output":"2"}],"timeLimit":3000,"url":"/home/aman/Desktop/codeforces/path.cpp"}
