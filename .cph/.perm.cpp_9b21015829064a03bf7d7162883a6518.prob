@@ -1,0 +1,1 @@
+{"group":"local","interactive":false,"local":true,"memoryLimit":1024,"name":"Local: perm","srcPath":"/home/aman/Desktop/codeforces/perm.cpp","tests":[{"id":1599148930581,"input":"ACBC","output":""},{"id":1599156691513,"input":"ACBC","output":"BACC\nBCAC\nBCCA"}],"timeLimit":3000,"url":"/home/aman/Desktop/codeforces/perm.cpp"}
