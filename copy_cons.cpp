@@ -18,7 +18,7 @@ class Person
         *no = *x;
     }
 
-    Person (const Person& obj)
+    Person ( const  Person& obj)
     {
         int x = 999;
         obj.no = &x;
